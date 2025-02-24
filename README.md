@@ -1,52 +1,52 @@
 # Orders API
 
-Orders API adalah layanan sederhana yang dibuat menggunakan Go untuk mengelola pesanan. API ini mencakup operasi CRUD (Create, Read, Update, Delete) dan dapat dijalankan dalam container Docker.
+Orders API is a simple service built using Go (without any framework) to manage orders. This API supports CRUD operations (Create, Read, Update, Delete) and can be deployed using Docker.
 
-## 🚀 Fitur
-- **CRUD Order**: Tambah, baca, perbarui, dan hapus pesanan.
-- **Dockerized**: Dapat dijalankan dalam container Docker.
+## 🚀 Features
+- **CRUD Order**: Create, read, update, and delete orders.
+- **Dockerized**: Can be run inside a Docker container.
 
 ---
-## 📌 Struktur Proyek
+## 📌 Project Structure
 ```
 /orders-api
-├── handlers/order_handler.go    # Handler untuk order API
-├── models/order.go              # Model data Order
-├── routes/routes.go             # Routing API
-├── main.go                      # Entry point aplikasi
-├── go.mod                       # Dependencies Go
+├── handlers/order_handler.go    # API order handler
+├── models/order.go              # Order data model
+├── routes/routes.go             # API routing
+├── main.go                      # Application entry point
+├── go.mod                       # Go dependencies
 ├── Dockerfile                   # Docker setup
-└── README.md                    # Dokumentasi proyek
+└── README.md                    # Project documentation
 ```
 
 ---
-## 🛠️ Cara Menjalankan
+## 🛠️ How to Run
 
-### **1️⃣ Jalankan Secara Lokal**
-Pastikan Go terinstal, lalu jalankan:
+### **1️⃣ Run Locally**
+Make sure Go is installed, then run:
 ```sh
 go run main.go
 ```
-API akan berjalan di `http://localhost:8080`
+The API will be available at `http://localhost:8080`
 
-### **2️⃣ Jalankan dengan Docker**
+### **2️⃣ Run with Docker**
 ```sh
 docker build -t orders-api .
 docker run -d -p 8080:8080 orders-api
 ```
-Cek API di `http://localhost:8080`
+Check the API at `http://localhost:8080`
 
 ---
 ## 📦 API Endpoints
-| Metode | Endpoint      | Deskripsi        |
+| Method | Endpoint      | Description        |
 |--------|-------------|----------------|
-| GET    | `/orders`   | Ambil semua order |
-| GET    | `/orders/{id}` | Ambil order by ID |
-| POST   | `/orders`   | Buat order baru |
-| PUT    | `/orders/{id}` | Update order |
-| DELETE | `/orders/{id}` | Hapus order |
+| GET    | `/orders`   | Retrieve all orders |
+| GET    | `/orders/{id}` | Retrieve order by ID |
+| POST   | `/orders`   | Create a new order |
+| PUT    | `/orders/{id}` | Update an order |
+| DELETE | `/orders/{id}` | Delete an order |
 
 ---
-## 📜 Lisensi
-Proyek ini menggunakan lisensi MIT. Silakan gunakan dan modifikasi sesuai kebutuhan!
+## 📜 License
+This project is licensed under the MIT License. Feel free to use and modify it as needed!
 
